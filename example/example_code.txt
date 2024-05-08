@@ -1,0 +1,52 @@
+#1. Estimate sample structure parameters
+library(Rcpp)
+library(RcppArmadillo)
+library(RcppDist)
+library(magrittr)
+library(data.table)
+library(MAPLE)
+#load the summary data for exposure and outcome
+exp = fread(paste0("betax.assoc.txt"),head=T)
+exp_raw = exp[,c("rs","beta","se","af","allele1","allele0","p_wald","n_obs")] 
+colnames(exp_raw) = c("SNP","b","se","frq_A1","A1","A2","P","N")
+out = fread(paste0("betay.assoc.txt"),head=T)
+out_raw = out[,c("rs","beta","se","af","allele1","allele0","p_wald","n_obs")] 
+colnames(out_raw) = c("SNP","b","se","frq_A1","A1","A2","P","N")
+
+paras = est_SS(dat1 = exp_raw,
+               dat2 = out_raw,
+               trait1.name = "exp",
+               trait2.name = "out",
+               ldscore.dir = "eur_w_ld_chr")
+#paras$Omega
+
+#2.Run MAPLE
+#load the z-score
+zscorex = fread(paste0("zscorex.txt"),head=F)
+Zscore_1 = as.vector(zscorex[[1]])
+zscorey = fread(paste0("zscorey.txt"),head=F)
+Zscore_2 = as.vector(zscorey[[1]])
+
+#load the LD matrix
+Sigmaxin = fread(paste0("Sigmax.txt"),head=F)
+Sigma1in = as.matrix(Sigmaxin)
+Sigmayin = fread(paste0("Sigmay.txt"),head=F)
+Sigma2in = as.matrix(Sigmayin)
+
+#load the sample size
+samplen1 = 20000
+samplen2 = 20000
+
+t1 = paras$Omega[1,1]
+t2 = paras$Omega[2,2]
+t12 = paras$Omega[1,2]
+
+result = MAPLE(Zscore_1,Zscore_2,Sigma1in,Sigma2in,samplen1,samplen2,Gibbsnumber=1000,burninproportion=0.2,pi_beta_shape=0.5,
+              pi_beta_scale=4.5,pi_c_shape=0.5,pi_c_scale=9.5,pi_1_shape=0.5,pi_1_scale=1.5,pi_0_shape=0.05,pi_0_scale=9.95,t1,t2,t12)
+result$t1=t1
+result$t2=t2
+result$t12=t12
+result$t1.se=paras$Omega.se[1,1]
+result$t2.se=paras$Omega.se[2,2]
+result$t12.se=paras$Omega.se[1,2]
+#result
