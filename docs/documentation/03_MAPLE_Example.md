@@ -7,7 +7,7 @@ MAPLE utilizes a set of correlated instrumental SNPs and self-adaptively determi
 
 # A simulated data example
 
-We conducted the null simulations based on the realistic genotypes from UK Biobank $$n_1 = n_2 = 20,000$$ on chr 1. 
+We conducted the null simulations based on the realistic genotypes from UK Biobank n<sub>1</sub> = n<sub>2</sub> = 20,000 on chr 1. 
 
 ## Step 1: Estimation of error matrix parameter
 
