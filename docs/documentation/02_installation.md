@@ -11,19 +11,19 @@ description: ~
 
 ### 1. Install devtools if necessary
 
-```{r eval=FALSE}
+```
 install.packages('devtools')
 ```
 
 ### 2. Install MAPLE
 
-```{r eval=FALSE}
+```
 devtools::install_github('yuanzhongshang/MAPLE')
 ```
 
 ### 3. Load package
 
-```{r eval=FALSE}
+```
 library(MAPLE)
 ```
 
@@ -31,7 +31,7 @@ library(MAPLE)
 
 (1)Cannot find tools necessary when using R in the MacOS system.
 
-```{r eval=FALSE}
+```
 Error: Failed to install 'MAPLE' from GitHub:
   Could not find tools necessary to compile a package
 Call `pkgbuild::check_build_tools(debug = TRUE)` to diagnose the problem.
@@ -41,7 +41,7 @@ possible solution: in R, type the code  options(buildtools.check = function(acti
 
 (2)library not found for -lgfortran when using R in the MacOS system.
 
-```{r eval=FALSE}
+```
 ld: library not found for -lgfortran
 ```
 
