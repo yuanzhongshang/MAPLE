@@ -31,7 +31,7 @@ links:
       url: https://github.com/yuanzhongshang/MAPLE/issues?state=open
 
 ui:
-  mode: 'light' # 'auto', 'dark', 'light'
+  mode: 'dark' # 'auto', 'dark', 'light'
   brand:
     dark: "#00ceff"
     light: "#36A7B9"
