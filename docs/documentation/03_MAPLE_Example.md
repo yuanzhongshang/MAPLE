@@ -13,7 +13,7 @@ We conducted the null simulations based on the realistic genotypes from UK Bioba
 
 The function `est_SS` can estimate the parameter $\mathbf{\Omega}$ using to account for sample structure (e.g., population stratification, cryptic relatedness, and sample overlap).
 
-```{r eval=FALSE}
+```
 library(Rcpp)
 library(RcppArmadillo)
 library(RcppDist)
@@ -71,7 +71,7 @@ The function `est_SS` will also conduct the following quality control procedures
 
 Now, we can check the estimates with the following commands:
 
-```{r eval=FALSE}
+```
 paras$Omega
 #            [,1]        [,2]
 #[1,]  0.99591955 -0.02936449
@@ -148,7 +148,7 @@ Note that,  we used $p=5\times{10}^{-8}$ for MAPLE to select candidate IVs witho
 
 Now, we can check the estimates from MAPLE:
 
-```{r eval=FALSE}
+```
 result$causal_effect
 #[1] -0.0404195
 result$causal_pvalue
