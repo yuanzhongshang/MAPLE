@@ -46,6 +46,7 @@ ui:
     light:
       color1: "#E49690"
       color2: "#8497B0"
+      font_color: "#000000"
   masthead:
     color:
       dark: "#fff"
