@@ -1,11 +1,7 @@
 ---
-#title: "03_MAPLE_Example"
-output:
-  html_document:
-    df_print: paged
-  pdf_document:
-    theme: hpstr
-    highlight: github
+layout: page
+title: Example Analysis
+description: ~
 ---
 MAPLE utilizes a set of correlated instrumental SNPs and self-adaptively determines the sample structure as well as multiple pleiotropic effects, both of which are commonly encountered in MR analysis. MAPLE can be used straightforward regardless of the proportion of sample overlap between the exposure GWAS and the outcome GWAS, which first accurately estimates the error matrix parameter using data from genome-wide summary statistics, then places the inference of the causal effect into a likelihood framework, accompanied by a scalable sampling-based algorithm to obtain calibrated p-values. This tutorial is the example analysis with MAPLE. Before running the tutorial, make sure that the MAPLE package is successfully installed. Please see the [link](02_installation.html) for the installation instructions. The example data for the tutorial can be downloaded in this [link](https://github.com/yuanzhongshang/MAPLE/tree/main/example).
 
