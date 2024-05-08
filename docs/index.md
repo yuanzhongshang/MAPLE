@@ -1,11 +1,8 @@
 ---
-#title: "MAPLE Overview"
-output:
-  html_document:
-    df_print: paged
-  pdf_document:
-    theme: hpstr
-    highlight: github
+layout: full
+homepage: true
+disable_anchors: true
+description: Mendelian randomization method with self-Adaptive determination of samPle structure and multiple pLEiotropic effects
 ---
 # MAPLE Overview
 
