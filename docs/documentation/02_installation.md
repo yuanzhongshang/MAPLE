@@ -1,12 +1,9 @@
 ---
-#title: "02_installation"
-output:
-  html_document:
-    df_print: paged
-  pdf_document:
-    theme: hpstr
-    highlight: github
+layout: page
+title: Installation
+description: ~
 ---
+
 ## Dependencies
 
 * R version >= 3.6.0
