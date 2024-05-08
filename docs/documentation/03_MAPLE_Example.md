@@ -94,7 +94,7 @@ Users have the option to skip this step and set the estimate `Omega` of $\mathbf
 
 The `MAPLE` function utilizes a scalable sampling-based algorithm to acquire calibrated $p$-values.
 
-```{r eval=FALSE}
+```
 #load the z-score
 zscorex = fread(paste0("zscorex.txt"),head=F)
 Zscore_1 = as.vector(zscorex[[1]])
