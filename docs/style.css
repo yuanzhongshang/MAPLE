@@ -75,7 +75,7 @@ pre, img {
 
 pre {
   border: 0px none;
-  background-color: #F8F8F8;
+  background-color: black;
   white-space: pre;
   overflow-x: auto;
 }
