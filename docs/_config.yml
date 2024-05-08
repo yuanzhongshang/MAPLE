@@ -33,16 +33,16 @@ links:
 ui:
   mode: 'dark' # 'auto', 'dark', 'light'
   brand:
-    dark: "#00ceff"
+    dark: "#8497B0"
     light: "#36A7B9"
   border_color:
-    dark: "#2A58C3"
+    dark: "#8497B0"
     light: "#00ceff"
   header:
     trianglify: true
     dark:
       color1: "#062a48"
-      color2: "#304e67"
+      color2: "#8497B0"
     light:
       color1: "#E49690"
       color2: "#8497B0"
