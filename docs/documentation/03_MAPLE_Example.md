@@ -67,7 +67,7 @@ The function `est_SS` will also conduct the following quality control procedures
 * remove SNPs with alleles not in (G, C, T, A),
 * remove SNPs with ambiguous alleles (G/C or A/T) or other false alleles (A/A, T/T, G/G or C/C),
 * exclude SNPs in the complex Major Histocompatibility Region (Chromosome 6, 26Mb-34Mb),
-* remove SNPs with χ<sup>2</sup> > χ<sup>2</sup><sub>max</sub>. The default value for χ<sup>2</sup><sub>max</sub> is max(N/1000, 80).
+* remove SNPs with *χ<sup>2</sup>* > *χ<sup>2</sup><sub>max</sub>*. The default value for *χ<sup>2</sup><sub>max</sub>* is max(N/1000, 80).
 
 Now, we can check the estimates with the following commands:
 
@@ -132,19 +132,19 @@ The input from summary statistics:
 * **samplen2**: the sample size of outcome GWAS.
 * **Gibbsnumber**: the number of Gibbs sampling iterations with the default to be 1000.
 * **burninproportion**:  the proportion to burn in from Gibbs sampling iterations, with default to be 20%.
-* **pi_beta_shape**: the prior shape paramter for $\pi_\beta$ with the default to be 0.5.
-* **pi_beta_scale**: the prior scale paramter for $\pi_\beta$ with the default to be 4.5.
-* **pi_c_shape**: the prior shape paramter for $\pi_c$ with the default to be 0.5.
-* **pi_c_scale**: the prior shape paramter for $\pi_c$ with the default to be 9.5.
-* **pi_1_shape**: the prior shape paramter for $\pi_1$ with the default to be 0.5.
-* **pi_1_scale**: the prior scale paramter for $\pi_1$ with the default to be 1.5.
-* **pi_0_shape**: the prior shape paramter for $\pi_0$ with the default to be 0.05.
-* **pi_0_scale**: the prior scale paramter for $\pi_0$ with the default to be 9.95.
+* **pi_beta_shape**: the prior shape paramter for *π<sub>β</sub>* with the default to be 0.5.
+* **pi_beta_scale**: the prior scale paramter for *π<sub>β</sub>* with the default to be 4.5.
+* **pi_c_shape**: the prior shape paramter for *π<sub>c</sub>* with the default to be 0.5.
+* **pi_c_scale**: the prior shape paramter for *π<sub>c</sub>* with the default to be 9.5.
+* **pi_1_shape**: the prior shape paramter for *π*<sub>1</sub> with the default to be 0.5.
+* **pi_1_scale**: the prior scale paramter for *π*<sub>1</sub> with the default to be 1.5.
+* **pi_0_shape**: the prior shape paramter for *π*<sub>0</sub> with the default to be 0.05.
+* **pi_0_scale**: the prior scale paramter for *π*<sub>0</sub> with the default to be 9.95.
 * **t1**: the intercept estimate of sigle-trait LD score regression from exposure data.
 * **t2**: the intercept estimate of sigle-trait LD score regression from outcome data.
 * **t12**: the intercept estimate of cross-trait LD score regression from exposure and outcome data.
 
-Note that,  we used p=5×10<sup>-8</sup> for MAPLE to select candidate IVs without LD clumping. Additionally, users can employ the same LD matrix derived from either exposure data, outcome data, or an LD reference panel as **Sigma1in** and **Sigma2in**, provided that no additional LD matrices are available for the SNPs in the exposure and outcome data, respectively.
+Note that,  we used *p*=5×10<sup>-8</sup> for MAPLE to select candidate IVs without LD clumping. Additionally, users can employ the same LD matrix derived from either exposure data, outcome data, or an LD reference panel as **Sigma1in** and **Sigma2in**, provided that no additional LD matrices are available for the SNPs in the exposure and outcome data, respectively.
 
 Now, we can check the estimates from MAPLE:
 
@@ -160,8 +160,8 @@ result$cause.se
 The output from `MAPLE` is a list containing:
 
 * **causal_effect**: the estimate of causal effect.
-* **causal_pvalue**: the p value for the causal effect.
+* **causal_pvalue**: the *p* value for the causal effect.
 * **cause.se**: the standard error of causal effect.
-* **correlated_pleiotropy_effect**: The confounder effect on the outcome (ω).
+* **correlated_pleiotropy_effect**: The confounder effect on the outcome (*ω*).
 * **sigmaeta**: the variance estimate for the uncorrelated pleiotropy effect.
 * **sigmabeta**: the variance estimate for the SNP effect sizes on the exposure.
