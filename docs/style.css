@@ -115,7 +115,7 @@ table, td, th {
 
 /* alternating row colors */
 tbody tr:nth-child(odd) td {
-  background-color: black;
+  background-color: white;
 }
 
 blockquote {
