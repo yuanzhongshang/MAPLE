@@ -34,12 +34,12 @@ ui:
   mode: 'light' # 'auto', 'dark', 'light'
   brand:
     dark: "#8497B0"
-    light: "#babebf"
+    light: "#000000"
   border_color:
     dark: "#8497B0"
-    light: "#00ceff"
+    light: "#babebf"
   header:
-    trianglify: true
+    trianglify: false
     dark:
       color1: "#062a48"
       color2: "#8497B0"
@@ -49,7 +49,7 @@ ui:
   masthead:
     color:
       dark: "#fff"
-      light: "#fff"
+      light: "#000000"
     align:
       homepage: 'center'
       page: 'left'
