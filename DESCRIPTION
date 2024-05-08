@@ -1,0 +1,17 @@
+Package: MAPLE
+Type: Package
+Title: MAPLE (a novel Mendelian randomization method with self-Adaptive
+        determination of sample structure and multiple pleiotropic
+        effects)
+Version: 1.0
+Date: 2024-05-06
+Author: Liye Zhang
+Maintainer: Zhongshang Yuan <yuanzhongshang@sdu.edu.cn>
+Description: MAPLE utilizes a set of correlated SNPs, self-adaptively accounts for the sample structure and the uncertainty that these correlated SNPs may exhibit multiple pleiotropic effects, as well as explicitly models both uncorrelated and correlated horizontal pleiotropy.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: Rcpp (>= 1.0.12), dplyr, magrittr, readr
+LinkingTo: Rcpp, RcppArmadillo, RcppDist
+RoxygenNote: 7.3.1
+NeedsCompilation: yes
+Packaged: 2024-05-06 10:50:57 UTC; 15122
