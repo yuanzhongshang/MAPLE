@@ -34,7 +34,7 @@ ui:
   mode: 'light' # 'auto', 'dark', 'light'
   brand:
     dark: "#8497B0"
-    light: "#666666"
+    light: "#E49690"
   border_color:
     dark: "#8497B0"
     light: "#666666"
