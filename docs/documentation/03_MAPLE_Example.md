@@ -11,7 +11,7 @@ We conducted the null simulations based on the realistic genotypes from UK Bioba
 
 ## Step 1: Estimation of error matrix parameter
 
-The function `est_SS` can estimate the parameter Ω using to account for sample structure (e.g., population stratification, cryptic relatedness, and sample overlap).
+The function `est_SS` can estimate the parameter Ω using to account for sample structure (e.g., population stratification, cryptic relatedness, and sample overlap). We used 20.03 seconds on Windows 11 in this step.
 
 ```
 library(Rcpp)
@@ -88,11 +88,11 @@ The output contains:
 
 * **Omega.se**: the estimated matrix consists of the standard errors of the intercept estimates obtained from LD score regression.
 
-Users have the option to skip this step and set the estimate `Omega` of Ω to the identity matrix if there is no confounding arising from sample structure.
+Users have the option to skip this step and set the estimate `Omega` of Ω to the identity matrix if there is no confounding arising from sample structure. 
 
 ## Step 2: Running MAPLE
 
-The `MAPLE` function utilizes a scalable sampling-based algorithm to acquire calibrated p-values.
+The `MAPLE` function utilizes a scalable sampling-based algorithm to acquire calibrated p-values. We used 7.05 seconds on Windows 11 in this step.
 
 ```
 #load the z-score
