@@ -90,7 +90,8 @@ write.table(y,paste0("./individual_xy/out.txt"),sep="\t",quote=F,row.names=F,col
 
 ```
 library(data.table)
-library(BEDMatrix) 
+library(BEDMatrix)
+
 #use Gemma to do association between SNP and exposure
 GEMMA="./gemma-0.98.1-linux-static"
 pfile=paste0("./individual_xy/exp.txt")
@@ -253,12 +254,14 @@ out = format_data(out_raw,
                   A2_col = "A2",
                   p_col = "P",
                   n_col = "N")
+
 #harmonize the formatted data sets and estimate nuisance parameters
 paras = est_paras(dat1 = exp,
                   dat2 = out,
                   trait1.name = "exp",
                   trait2.name = "out",
                   ldscore.dir = "./eur_w_ld_chr")
+
 #LD clumping
 MRdat =  clump(paras$dat,
                IV.Threshold = 5e-04,
@@ -268,6 +271,7 @@ MRdat =  clump(paras$dat,
                clump_r2 = 0.01,
                bfile = "./all_1000G_EUR_Phase3",
                plink_bin = "./PLINK/plink")
+
 #fit MR-APSS
 MRres = MRAPSS(MRdat,
                exposure = "exp",
@@ -473,6 +477,7 @@ LD.filepath = "./LDscores_filtered.csv" # LD scores
 rho.filepath = "./LD_GM2_2prm.csv" # local/SNP-specfic LD scores
 ld = "./eur_w_ld_chr/"
 hm3 = "./w_hm3.snplist"
+
 ## read in summary statistics file
 X = data.table::fread(paste0("./gemma_exp/output/betax.assoc.txt"),head = T)
 X = X[,c("rs","allele1","allele0","beta","se","p_wald","n_obs")]
